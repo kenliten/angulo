@@ -1,0 +1,24 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM => repear for each one in the team
+
+<Your title>: <Your name>.
+Site: <email, link to a contact form, etc.>
+Twitter: <your Twitter username.>
+
+# THANKS
+
+Name: <name or url>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Popper.js, Bootstrap
+
+# SITE
+
+Last update: YYYY/MM/DD
+Standards: /* Standarts you adopt in the project. Eg: HTML5, CSS3, ECMAScript6 */
+Components: /* Frameworks and stuff used to build the site. Eg: jquery, bootstrap */
+Software: /* Software used to create the site. Eg: sublime text, google chrome, btgen */
