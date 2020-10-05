@@ -1,17 +1,92 @@
+/* 
+Aligning this element to middle screen just to ensure they work
+*/
+
+#controls-container{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+#controls{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.control{
+	padding: 12px 24px;
+	font-size: 22px;
+}
+
+
+/* 
+Test styles end
+*/
+
 body{
 	background-color: #eeeeee;
 }
 
+#sidepanel{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(22, 28, 31, .5);
+}
+
+#sidepanel-empty{
+	width: 60%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#sidepanel-content{
+	position: absolute;
+	right: -40%;
+	width: 40%;
+	bottom: 0;
+	top: 0;
+	background-color: #E0E0E0;
+	transition-timing-function: linear;
+	transition-property: right;
+	transform-origin: left;
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+#sidepanel-closer{
+	font-size: 32px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
 button{
-	background-color: #1976D2;
+	background-color: #1E88E5;
 	color: #ffffff;
 	font-size: 18px;
 	padding: 8px auto;
 	border: 0;
 }
 
-#note-pad{
-	width: 75%;
+button:hover {
+	background-color: #1976D2;
+}
+
+#note-pad, #todo-list{
+	display: none;
+	width: 90%;
 	max-width: 600px;
 	margin: 16px auto;
 }
@@ -22,7 +97,7 @@ button{
 }
 
 #note-title{
-	width: 90%;
+	width: 85%;
 	display: inline-block;
 	padding: 8px;
 	font-size: 18px;
@@ -35,7 +110,7 @@ button{
 }
 
 #save-button{
-	width: 10%;
+	width: 15%;
 }
 
 #note-text{
@@ -47,6 +122,7 @@ button{
 	height: 70vh;
 	overflow: auto;
 	color: #848484;
+	resize: none;
 }
 
 #note-text:focus{

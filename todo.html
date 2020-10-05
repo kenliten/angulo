@@ -1,0 +1,12 @@
+<div id="todo-header">
+    <input type="text" autofocus ng-model="todoText" id="todo-text">
+    <button id="todo-save-button" ng-click="saveTodo()">Save</button>
+</div>
+<div id="todos-container">
+    <ul ng-show="todos.length > 0" class="todo-list">
+        <li ng-repeat="todo in todos" class="todo">
+            <input type="checkbox" ng-model="todo.done" id="todo{{todo.id}}"><label ng-dblclick="openTodoEditor()"
+                for="todo{{todo.id}}">{{ todo.text }}</label>
+        </li>
+    </ul>
+</div>

@@ -1,6 +1,8 @@
 (function(){
 
-    angular.module('angulo').controller('TodoListController', function($scope){
+    angular.module('angulo')
+        .controller('TodoListController', function($scope){
+            $scope.container = 'todo.html';
             $scope.todoText = '';
             $scope.todos = [];
             $scope.saveTodo = function(){

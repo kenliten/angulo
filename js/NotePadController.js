@@ -1,6 +1,8 @@
 ;(function(){
 
-  angular.module('angulo').controller('NotePadController', function($scope){
+  angular.module('angulo')
+  	.controller('NotePadController', function($scope){
+		$scope.container = 'notepad.html';
 	  	$scope.noteTitle = localStorage.getItem('noteTitle') !== null && localStorage.getItem('noteTitle') !== '' ? localStorage.getItem('noteTitle') : 'Untitled note';
 
   		$scope.noteText = localStorage.getItem($scope.noteTitle) == null ? '' : localStorage.getItem($scope.noteTitle);
