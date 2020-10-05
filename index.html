@@ -1,21 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="angulo">
   <head>
-    <title>angulo</title>
+    
+    <title>Angulo</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" type="text/css" href="css/vendor/nvk.colors.min.css">
     <link rel="stylesheet" href="css/master.css">
+
   </head>
   <body>
 
-    <h1>angulo</h1>
+    <h1 class="blue-bg white-tx">Angulo v1.0.0</h1>
 
-    <div id="main"></div>
+    <div ng-controller="NotePadController" id="note-pad">
+      <div id="title-bar">
+        <input type="text" autofocus ng-keyup="saveTempNoteTitle()" ng-model="noteTitle" id="note-title">
+        <button id="save-button" ng-click="saveNote()">Save</button>
+      </div>
+      <textarea ng-keyup="saveTempNote()" ng-model="noteText" placeholder="Type your text here" id="note-text"></textarea>
+      <div id="info-box">
+        <div id="info-card">
+          <h4 id="info-title">{{ info.title }}</h4>
+          <div id="info-body">{{ info.body }}</div>
+          <div id="info-actions">
+            <div ng-show="info.showActions">
+              <div ng-repeat="action in info.actions" class="inline-block">
+                <button class="info-action" ng-click="action.method()">{{action.title}}</button>
+              </div>
+              <button class="info-action" ng-click="closeInfoBox()">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script type="text/javascript" src="js/vendor/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <div ng-controller="TodoListController" id="todo-list">
+      <div id="todo-header">
+        <input type="text" autofocus ng-model="todoText" id="todo-text">
+        <button id="todo-save-button" ng-click="saveTodo()">Save</button>
+      </div>
+      <div id="todos-container">
+        <ul ng-show="todos.length > 0" class="todo-list">
+          <li ng-repeat="todo in todos" class="todo">
+            <input type="checkbox" ng-model="todo.done" id="todo{{todo.id}}"><label ng-dblclick="openTodoEditor()" for="todo{{todo.id}}">{{ todo.text }}</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/angular.js"></script>
+    <script type="text/javascript" src="js/angulo.js"></script>
+    <script type="text/javascript" src="js/NotePadController.js"></script>
+    <script type="text/javascript" src="js/TodoListController.js"></script>
 
   </body>
 </html>
