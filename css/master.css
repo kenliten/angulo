@@ -1,108 +1,101 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
- margin:0;
- padding:0;
- border:0;
- outline:0;
- font-size:100%;
- vertical-align:baseline;
- background:transparent;
+body{
+	background-color: #eeeeee;
 }
 
-body {
- line-height:1;
+button{
+	background-color: #1976D2;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 8px auto;
+	border: 0;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
- display:block;
+#note-pad{
+	width: 75%;
+	max-width: 600px;
+	margin: 16px auto;
 }
 
-nav ul {
- list-style:none;
+#title-bar{
+	display: flex;
+	border-bottom: 1px solid black;
 }
 
-blockquote, q {
- quotes:none;
+#note-title{
+	width: 90%;
+	display: inline-block;
+	padding: 8px;
+	font-size: 18px;
+	border: 0;
+	color: #848484;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
- content:'';
- content:none;
+#note-title:focus{
+	color: #000;
 }
 
-a {
- margin:0;
- padding:0;
- font-size:100%;
- vertical-align:baseline;
- background:transparent;
+#save-button{
+	width: 10%;
 }
 
-/* change colours to suit your needs */
-ins {
- background-color:#ff9;
- color:#000;
- text-decoration:none;
+#note-text{
+	width: 100%;
+	display: block;
+	padding: 4px;
+	font-size: 16px;
+	border: 0;
+	height: 70vh;
+	overflow: auto;
+	color: #848484;
 }
 
-/* change colours to suit your needs */
-mark {
- background-color:#ff9;
- color:#000;
- font-style:italic;
- font-weight:bold;
+#note-text:focus{
+	color: #000;
 }
 
-del {
- text-decoration: line-through;
+#info-box{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(22, 28, 31, .5);
 }
 
-abbr[title], dfn[title] {
- border-bottom:1px dotted;
- cursor:help;
+#info-card{
+	width: 50%;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-table {
- border-collapse:collapse;
- border-spacing:0;
+#info-title{
+	border-bottom: 1px solid #E0E0E0;
+	padding: 16px;
+	text-align: center;
 }
 
-/* change border colour to suit your needs */
-hr {
- display:block;
- height:1px;
- border:0;
- border-top:1px solid #cccccc;
- margin:1em 0;
- padding:0;
+#info-body{
+	border-bottom: 1px solid #E0E0E0;
+	padding: 32px 16px;
+	text-align: justify;
 }
 
-input, select {
- vertical-align:middle;
+#info-actions{
+	padding: 16px;
+	text-align: right;
 }
 
-/* User styles */
-/* General styles */
+.inline-block{
+	display: inline-block;
+}
+
+.info-action{
+	padding: 8px 16px;
+}
 
 /* small screens */
 
@@ -119,17 +112,5 @@ input, select {
 /* large screens */
 
 @media (min-width: 992px) {
-	/* styles here */
-}
-
-/* extralarge screens */
-
-@media (min-width: 1200px) {
-	/* styles here */
-}
-
-/* printing styles */
-
-@media print {
 	/* styles here */
 }

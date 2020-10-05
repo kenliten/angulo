@@ -1,0 +1,23 @@
+{
+  "name": "angulo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -c-1 -d -i ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenliten/angulo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenliten/angulo/issues"
+  },
+  "homepage": "https://github.com/kenliten/angulo#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
