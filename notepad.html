@@ -1,18 +1,21 @@
-<div id="title-bar">
-    <input type="text" autofocus ng-keyup="saveTempNoteTitle()" ng-model="noteTitle" id="note-title">
-    <button id="save-button" ng-click="saveNote()">Save</button>
-</div>
-<textarea ng-keyup="saveTempNote()" ng-model="noteText" placeholder="Type your text here" id="note-text"></textarea>
-<div id="info-box">
-    <div id="info-card">
-        <h4 id="info-title">{{ info.title }}</h4>
-        <div id="info-body">{{ info.body }}</div>
-        <div id="info-actions">
-            <div ng-show="info.showActions">
-                <div ng-repeat="action in info.actions" class="inline-block">
-                    <button class="info-action" ng-click="action.method()">{{action.title}}</button>
+<div ng-controller="NotePadController" id="note-pad">
+    <h3>Note Pad</h3>
+    <div id="title-bar">
+        <input type="text" autofocus ng-keyup="saveTempNoteTitle()" ng-model="noteTitle" id="note-title">
+        <button id="note-save-button" ng-click="saveNote()">Save</button>
+    </div>
+    <textarea ng-keyup="saveTempNote()" ng-model="noteText" placeholder="Type your text here" id="note-text"></textarea>
+    <div id="info-box">
+        <div id="info-card">
+            <h4 id="info-title">{{ info.title }}</h4>
+            <div id="info-body">{{ info.body }}</div>
+            <div id="info-actions">
+                <div ng-show="info.showActions">
+                    <div ng-repeat="action in info.actions" class="inline-block">
+                        <button class="info-action" ng-click="action.method()">{{action.title}}</button>
+                    </div>
+                    <button class="info-action" ng-click="closeInfoBox()">Close</button>
                 </div>
-                <button class="info-action" ng-click="closeInfoBox()">Close</button>
             </div>
         </div>
     </div>

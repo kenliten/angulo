@@ -26,15 +26,11 @@
       <div id="sidepanel-empty"></div>
       <div id="sidepanel-content">
         <span id="sidepanel-closer">&times;</span>
-        <div ng-controller="NotePadController" id="note-pad">
-          <h3>Note Pad</h3>
-          <ng-include src="container"></ng-include>
-        </div>
         
-        <div ng-controller="TodoListController" id="todo-list">
-          <h3>TODO List</h3>
-          <ng-include src="container"></ng-include>
-        </div>
+        <ng-include src="'notepad.html'"></ng-include>
+                
+        <ng-include src="'todo.html'"></ng-include>
+
       </div>
     </div>
 
